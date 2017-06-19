@@ -8,7 +8,7 @@ Written by Christian Rennemo - 2016
 	#GLOBAL VARIABLES
 \*------------------------------------*/
 var AlleForeninger = [];
-var URLNext = 'https://www.dnt.no/api/v3/iprospect_pilot/foreninger/?limit=50&offset=450';
+var URLNext = 'https://www.dnt.no/api/v3/iprospect_pilot/foreninger/?limit=50';
 var firstTime = true;
 
 // My const
