@@ -1,0 +1,276 @@
+/*------------------------------------*\
+	#RESET
+\*------------------------------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+
+/*------------------------------------*\
+	#GENERAL
+\*------------------------------------*/
+html, body {
+    font-size: 62.5%;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+body {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f1f1f1;
+    position: relative;
+}
+
+.content {
+    /* Flex on content to keep footer always at bottom */
+    flex: 1 0 auto;
+}
+
+/*------------------------------------*\
+	#TYPOGRAPHY
+\*------------------------------------*/
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+}
+h2{
+  font-size: 1.8rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+li {
+  font-family: var(--textfont);
+}
+
+body{
+  font-size: 1.4rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+/*------------------------------------*\
+	#HEADER
+\*------------------------------------*/
+header {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+    background-color: #fff;
+    margin-bottom: 2rem;
+    background-color: #D82D20;
+}
+nav {
+    background-color: #d82d20;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    max-width: 80rem;
+}
+
+nav a,
+.pagebar a {
+    text-decoration: none;
+}
+
+.menu-item {
+    align-self: center;
+}
+
+.menu-item a {
+    display: block;
+    padding: 2rem;
+    color: #fff;
+}
+
+.menu-item .img-wrapper {
+    padding: 0;
+}
+nav img {
+    max-width: 5rem;
+}
+
+.pagebar {
+    background-color: #fff;
+    text-align: center;
+}
+
+.pagebar span {
+    padding: 1rem;
+    display: inline-block;
+    color: #333;
+    cursor: pointer;
+}
+
+/*------------------------------------*\
+	#CONTENT
+\*------------------------------------*/
+.content {
+
+}
+
+section {
+    background-color: #fff;
+    max-width: 80rem;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+ul.js-list {
+    min-height: 56rem;
+    width: 100%;
+}
+
+section li {
+    list-style: none;
+}
+
+li.list-item a {
+    display: block;
+    padding: 2rem;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    text-decoration: none;
+	cursor: pointer;
+}
+
+.activities {
+    position: absolute;
+    left: 4rem;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #fff;
+    transform: translateX(102%);
+    box-shadow: -2px 3px 6px rgba(0,0,0,0.16);
+    transition: transform 0.2s ease;
+    overflow: scroll;
+}
+
+.activities .backBtn {
+    padding: 2rem 0 0 2rem;
+    cursor: pointer;
+}
+
+.activities.isActive {
+    transform: translateX(0);
+}
+
+.activities-wrapper {
+    padding: 2rem;
+}
+
+.activities-wrapper .current-forening {
+    text-align: center;
+    font-size: 2.8rem;
+}
+
+span.empty-msg {
+    font-style: italic;
+    color: #ccc;
+    display: block;
+    text-align: center;
+    padding: 2rem;
+}
+
+li.list-item a:hover {
+    /*background-color: #fbfbfb;*/
+}
+
+/*------------------------------------*\
+	#SEARCH
+\*------------------------------------*/
+.searchPage {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #d82d20;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease;
+    z-index: 10;
+}
+
+.material-icons.close {
+    color: #fff;
+    font-size: 7rem;
+    margin: 2rem 2rem 0 0;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.material-icons.close:hover {
+    transform: rotate(90deg);
+}
+
+.searchPage.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.closeSearchPage {
+    display: block;
+    text-align: right;
+    margin-bottom: 8rem;
+}
+
+.search-wrapper {
+    max-width: 40rem;
+    margin: 0 auto;
+    color: #fff;
+}
+
+.search-wrapper h2 {
+    font-weight: 400;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.search-wrapper input {
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    color: #fff;
+    font-weight: 400;
+    padding-left: 1rem;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255,255,255,0.5);
+    outline: none;
+}
+
+.search-wrapper a {
+    color: #fff;
+}
+
+.search-wrapper li {
+    list-style: none;
+}
