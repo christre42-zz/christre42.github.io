@@ -1,5 +1,5 @@
 /*
-Written by Christian Rennemo - 2016
+Written by Christian Rennemo - 2017
 */
 
 'use strict'
@@ -220,7 +220,6 @@ function populateActivitiesList(data) {
         append(ulAktiviteter, span);
     } else {
         return resultset.map(function(result) {
-            console.log(result.aktivitet.title);
             let li = createNode('li'),
                 a = createNode('a');
             li.classList.add('list-item');
@@ -313,9 +312,7 @@ class searchPage {
     liveSearch() {
         // Check if string matches from complete json-file
         clearChilderen('.js-resultsUl');
-        console.log(this.inputEl.value);
         var searchString = this.inputEl.value;
-        console.log(searchString);
 
         var count = AlleForeninger.length;
         for (var i = 0; i < count; i++) {

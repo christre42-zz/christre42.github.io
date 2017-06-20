@@ -44,6 +44,7 @@ body {
     flex-direction: column;
     background-color: #f1f1f1;
     position: relative;
+    overflow: hidden;
 }
 
 .content {
@@ -157,7 +158,10 @@ li.list-item a {
     color: #333;
     border-bottom: 1px solid #eee;
     text-decoration: none;
-	cursor: pointer;
+}
+
+a.forening {
+    cursor: pointer;
 }
 
 .activities {
